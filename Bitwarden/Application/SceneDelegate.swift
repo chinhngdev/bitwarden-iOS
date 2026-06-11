@@ -114,10 +114,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
     }
 
+    /// Được gọi khi app sắp mất focus — ví dụ: người dùng mở app switcher, có cuộc gọi đến, kéo Control Center xuống.
     func sceneWillResignActive(_ scene: UIScene) {
         showSplash()
     }
 
+    /// Được gọi khi app lấy lại focus - ví dụ: người dùng mở lại ứng dụng từ background.
     func sceneDidBecomeActive(_ scene: UIScene) {
         guard !isStartingUp else { return }
         hideSplash()
